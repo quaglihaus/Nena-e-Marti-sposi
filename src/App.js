@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import { Autocomplete, TextField } from "@mui/material"
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -35,6 +36,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={['ciaio, grazie']}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Movie" />}
+        />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
