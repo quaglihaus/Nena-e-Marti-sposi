@@ -22,7 +22,7 @@ class LambdaDemo extends Component {
 
     return (
       <div>
-        <div>Ciao Martillo!!</div>
+        <div>Ciao Martillo & Nena!!</div>
         <button onClick={this.handleClick("hello")}>
           {loading ? "Loading..." : "Call Lambda"}
         </button>
