@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import FirstPage from "./home_page/first_page"
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -36,13 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>ciao</div>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
+        <FirstPage/>
       </div>
     )
   }
