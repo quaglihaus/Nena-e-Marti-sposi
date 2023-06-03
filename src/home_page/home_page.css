@@ -6,6 +6,6 @@
 
 .main_labels {
     color: aliceblue;
-    text-shadow: 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    text-shadow: 0 0 3px #000;
     font-family: 'Times New Roman', Times, serif;
 }
