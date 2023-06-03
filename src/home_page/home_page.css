@@ -1,0 +1,11 @@
+.autocomplete {
+    background-color: aliceblue;
+    margin: 5px;
+    align-self: center;
+}
+
+.main_labels {
+    color: aliceblue;
+    text-shadow: 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    font-family: 'Times New Roman', Times, serif;
+}
