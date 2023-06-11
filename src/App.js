@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import FirstPage from "./home_page/first_page"
-import SecondPage from "./home_page/second_page"
+import PlacesPage from "./home_page/places_page"
+import SubmitPage from "./home_page/submit_page"
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -43,7 +44,8 @@ class App extends Component {
     return (
       <div className="App">
         <FirstPage/>
-        <SecondPage/>
+        <PlacesPage/>
+        <SubmitPage/>
       </div>
     );
   }

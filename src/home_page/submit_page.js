@@ -3,7 +3,7 @@ import { Autocomplete, TextField, Button } from "@mui/material";
 import {isUndefined, isNull} from "lodash"
 import './home_page.css'
 
-export function SecondPage() {
+export function SubmitPage() {
 
     const guests = [
         {guestName: 'Martino', guestSurname: 'Quaglia', guestAllergies: ''},
@@ -38,7 +38,7 @@ export function SecondPage() {
     }
 
     
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbymn4PLZ2LD7BNUD41dNkUuZU2Lfi-vScOfisI_90nDDZDc9Y7jpi3hReOeKqXl1-UV/exec"
+    const scriptUrl = "https://sheet.best/api/sheets/5172f5ed-5d5c-4a5e-84bb-afb8b360056a"
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -48,16 +48,25 @@ export function SecondPage() {
         form.append('Cognome', surname)
         form.append('Allergie', allergies)
 
+        console.log('dati invitato:', form)
+
         fetch(scriptUrl, {method: 'POST', body: form})
         .then(res => {
-            console.log("SUCCESSFULLY SUBMITTED")
+            console.log("SUCCESSFULLY SUBMITTED", res)
         })
         .catch(err => console.log(err))
     }
 
     return(
-        <div style={{backgroundColor:'aliceblue', backgroundSize: 'contain', width: '100%', height: '100vh', textAlign:'-webkit-center', paddingTop:'20px'}}>
-            <h5 style={{fontFamily: 'Times', color:'darkblue', padding:'0px'}}>LE TUE INFORMAZIONI</h5>
+        <div className="div_background" style={{textAlign:'-webkit-center', paddingTop:'20vh'}}>
+            <h2 className="square_title">E tu ci sarai?</h2>
+            <div style={{backgroundImage: 'url(/pictures/mountain_kiss_vextended.jpg)', 
+                         backgroundColor: 'white', 
+                         padding: '5px',
+                         minHeight: '20vh',
+                         margin:'0px 10px 10px 10px'}}>
+            </div>
+            <h3 className="square_title" style={{color:'#606366'}}>Le tue informazioni</h3>
             <div style={{backgroundColor: 'white', padding: '5px', margin:'0px 10px 10px 10px'}}>
                 <Autocomplete className="autocomplete"
                     disablePortal
@@ -78,6 +87,7 @@ export function SecondPage() {
                     onChange={(value) => {autocompleteOtherFields(value)}}
                 />
                 <Autocomplete className="autocomplete"
+                    freeSolo
                     disablePortal
                     id="guestAllergies"
                     options={guestsAllergiesTmp}
@@ -86,10 +96,16 @@ export function SecondPage() {
                     renderInput={(params) => <TextField {...params} label="Allergie" />}
                     onChange={(value) => {autocompleteOtherFields(value)}}
                 />
-                <Button variant="contained" onClick={handleSubmit}>Conferma</Button>
-            </div>  
+                <Button variant="contained" onClick={handleSubmit} style={{marginBottom:'5px'}}>Conferma</Button>
+            </div>
+
+            <div style={{marginTop:'10vh', backgroundColor: 'aliceblue', backgroundSize: 'contain', width: '100%'}}>
+                <h3 className="square_title" style={{color:'#606366'}}>Il regalo siete voi, che ci accompagnate nella nostra vita!</h3>
+                <h4 className="square_title" style={{color:'#606366'}}>Io non merito niente, tantomeno questo, però se volete regalare a Nena qualcosa in più ecco i riferimenti:</h4>
+            </div>
+
         </div>
     )
 }
 
-export default SecondPage
+export default SubmitPage

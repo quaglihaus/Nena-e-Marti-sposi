@@ -8,10 +8,11 @@ console.log('ciaoooo')
 
     return(
         <>
-            <div style={{backgroundImage: 'url(/pictures/mountain_kiss.jpeg)', backgroundSize: 'contain', width: '100%', height: '100vh', textAlign:'-webkit-center', paddingTop:'40px', fontFamily: ''}}>
+            <div style={{backgroundImage: 'url(/pictures/mountain_kiss_vextended_enhanced.jpg)', backgroundSize: 'cover',backgroundRepeat:'no-repeat', width: '100%', height: '100vh', textAlign:'-webkit-center', paddingTop:'10vh', fontFamily: ''}}>
                 <h2 className="main_labels">ELENA E MARTINO</h2>
-                <h4 className="main_labels">ANNUNCIANO CON GIOIA</h4>
+                <h5 className="main_labels">ANNUNCIANO CON GIOIA</h5>
                 <h2 className="main_labels">IL LORO MATRIMONIO</h2>
+                <h3 className="main_labels">30 Settembre 2023</h3>
             </div>
         </>
     )
