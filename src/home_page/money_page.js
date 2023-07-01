@@ -6,7 +6,6 @@ import './home_page.css'
 export function MoneyPage() {
 
 
-
     return(
         
 

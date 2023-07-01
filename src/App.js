@@ -5,6 +5,7 @@ import FirstPage from "./home_page/first_page"
 import PlacesPage from "./home_page/places_page"
 import SubmitPage from "./home_page/submit_page"
 import MoneyPage from "./home_page/money_page"
+import LastPage from "./home_page/last_page"
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -48,6 +49,7 @@ class App extends Component {
         <PlacesPage/>
         <SubmitPage/>
         <MoneyPage/>
+        <LastPage/>
       </div>
     );
   }
