@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Cormorant SC';
+  src: url('./fonts/CormorantSC-Light.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
+  font-family: 'Cormorant SC', sans-serif;
 }
 
 .App-logo {
