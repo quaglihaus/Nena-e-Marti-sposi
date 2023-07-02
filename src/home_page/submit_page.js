@@ -223,7 +223,8 @@ export function SubmitPage() {
                          backgroundSize: 'contain',backgroundRepeat:'no-repeat',
                          height: '23vh',
                          width: '40vh',
-                         margin:'0px 10px 10px 10px'}}>
+                         margin:'0px 10px 10px 10px',
+                         borderRadius:'20px'}}>
             </div>
             <div className="genericCard">
                 <h3 className="square_title" style={{color:'#606366'}}>Le tue informazioni</h3>
