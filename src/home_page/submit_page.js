@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Autocomplete, TextField, Button } from "@mui/material";
+import { Autocomplete, TextField, Button, Alert } from "@mui/material";
 import {isUndefined, isNull} from "lodash"
 import './home_page.css'
 
@@ -167,6 +167,8 @@ export function SubmitPage() {
     const [surname, setSurname] = useState('')
     const [allergies, setAllergies] = useState('')
     
+    const [registered, setRegistered] = useState(false)
+    
     
     function MatchingObjects( objects, text, section ) {
         const matchingObjects = objects.filter(obj => obj[section] === text);
@@ -212,8 +214,12 @@ export function SubmitPage() {
         fetch(scriptUrl, {method: 'POST', body: form})
         .then(res => {
             console.log("SUCCESSFULLY SUBMITTED", res)
+            setRegistered(true)
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            console.log(err)
+            setRegistered(false)
+        })
     }
 
     return(
@@ -245,7 +251,10 @@ export function SubmitPage() {
                     onChange={(event, newValue) => {autocompleteOtherFields('guestSurname', event, newValue)}}
                 />
                 <TextField style={{margin:'0px 20px 20px 20px', width:'-webkit-fill-available'}} className="autocomplete" id="guestAllergies" label="Allergie" variant="outlined" onChange={(event) => {setAllergies(event.target.value)}} />
-                <Button variant="contained" onClick={handleSubmit} style={{marginBottom:'5px', marginTop:'25px'}}>Conferma</Button>
+                {registered &&
+                    <Alert severity="success">Sei registrato, vedi di esserci che ci teniamo tanto tanto. Baci!</Alert>
+                }
+                <Button variant="contained" color={registered? 'success' : 'primary'} onClick={handleSubmit} style={{marginBottom:'5px', marginTop:'25px'}}>Conferma</Button>
             </div>
 
         </div>
