@@ -42,7 +42,7 @@ export function SubmitPage() {
         {guestName: 'Gabriele', guestSurname: 'Potente', guestAllergies: ''},
         {guestName: 'Francesca', guestSurname: 'Rosso', guestAllergies: ''},
         {guestName: 'Giovanna', guestSurname: 'Brunetti', guestAllergies: ''},
-        {guestName: 'Massimo', guestSurname: 'Scazzola', guestAllergies: ''},
+        {guestName: 'Massimo', guestSurname: 'Scazzola', guestAllergies: 'i TreMendi'},
         {guestName: 'Davide', guestSurname: 'Mollo', guestAllergies: ''},
         {guestName: 'Ilaria', guestSurname: 'Carnino', guestAllergies: ''},
         {guestName: 'Cristina', guestSurname: 'Santangelo', guestAllergies: ''},
@@ -104,7 +104,6 @@ export function SubmitPage() {
         {guestName: 'Cristina', guestSurname: 'Monticelli', guestAllergies: ''},
         {guestName: 'Franco', guestSurname: 'Monticelli', guestAllergies: ''},
         {guestName: 'Pier Paolo', guestSurname: 'don', guestAllergies: ''}, //TODO
-        {guestName: 'Renato', guestSurname: 'don', guestAllergies: ''}, //TODO
         {guestName: 'Giuseppe', guestSurname: 'Quaglia', guestAllergies: ''},
         {guestName: 'Liliana', guestSurname: 'Quaglia', guestAllergies: ''},
         {guestName: 'Annamaria', guestSurname: 'Quaglia', guestAllergies: ''},
@@ -137,7 +136,7 @@ export function SubmitPage() {
         {guestName: 'Marco', guestSurname: 'Baldini', guestAllergies: ''},
         {guestName: 'Giada', guestSurname: 'Germanò', guestAllergies: ''},
         {guestName: 'Gabriele', guestSurname: 'Puce', guestAllergies: ''},
-        {guestName: 'Maria Chiara', guestSurname: 'Ingo', guestAllergies: ''},
+        {guestName: 'Mariachiara', guestSurname: 'Ingo', guestAllergies: ''},
         {guestName: 'Chiara', guestSurname: 'Provale', guestAllergies: ''},
         {guestName: 'Ludivica', guestSurname: 'Unnia', guestAllergies: ''},
         {guestName: 'Andrea', guestSurname: 'Fiorentino', guestAllergies: ''},
@@ -148,7 +147,8 @@ export function SubmitPage() {
         {guestName: 'Paola', guestSurname: 'Saccone', guestAllergies: ''},
         {guestName: 'Davide', guestSurname: 'Salatino', guestAllergies: ''},
         {guestName: 'Angelica', guestSurname: 'Cirigliano', guestAllergies: ''},
-        {guestName: 'Alberto', guestSurname: 'Scazzola', guestAllergies: 'Uova, Frumento'}
+        {guestName: 'Alberto', guestSurname: 'Scazzola', guestAllergies: 'Uova, Frumento'},
+        {guestName: 'Marco', guestSurname: 'De Tommasi', guestAllergies: 'Martino'}
     ]
     
     let guestsNamesFull = guests.map(obj => obj.guestName)
