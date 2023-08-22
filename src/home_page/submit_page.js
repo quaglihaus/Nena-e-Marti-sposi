@@ -148,7 +148,10 @@ export function SubmitPage() {
         {guestName: 'Lorenzo', guestSurname: 'Zenobio di Fusco', guestAllergies: 'Denny'},
         {guestName: 'Fabio', guestSurname: 'Reis', guestAllergies: 'la figa'},
         {guestName: 'Davide', guestSurname: 'Galdini', guestAllergies: 'bambini'},
-        {guestName: 'Gabriele', guestSurname: 'Carosso', guestAllergies: ''}
+        {guestName: 'Gabriele', guestSurname: 'Carosso', guestAllergies: ''},
+        {guestName: 'Franco', guestSurname: 'Aquilano', guestAllergies: ''},
+        {guestName: 'Cristina', guestSurname: 'Aquilano', guestAllergies: ''},
+        {guestName: 'Lia', guestSurname: 'Aquilano', guestAllergies: ''},
     ]
     
     let guestsNamesFull = guests.map(obj => obj.guestName)
